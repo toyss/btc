@@ -92,6 +92,17 @@ export default class Home extends React.Component {
             </div>
           }
         },
+        {
+          align: 'center',
+          title: '日期',
+          width: 150,
+          dataIndex: 'tickertime',
+          render (text) {
+            return new Date(text)
+              .toLocaleString()
+              .split(' ')[0]
+          }
+        }
       ]
     }
   }
