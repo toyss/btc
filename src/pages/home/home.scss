@@ -1,0 +1,11 @@
+.ant-tag {
+  cursor: pointer;
+}
+
+.ant-table-thead > tr > th {
+  background: #eee;
+}
+
+.ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+  background: #d2e4c4;
+}
