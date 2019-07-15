@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --config build/webpack.config.js",
-    "build": "webpack --config build/webpack.config.js",
+    "build": "webpack --mode production --config build/webpack.config.js",
     "defend": "forever start app.js",
     "kill": "forever stopall",
     "restart": "git pull && forever restartall",
