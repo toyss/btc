@@ -97,11 +97,27 @@ export default class Home extends React.Component {
           align: 'center',
           title: '日期',
           width: 150,
-          dataIndex: 'tickertime',
-          render (text) {
-            return new Date(text)
+          render (item) {
+            return new Date(item.tickertime)
               .toLocaleString()
               .split(' ')[0]
+          }
+        },
+        {
+          align: 'center',
+          title: '实际',
+          width: 150,
+          render: item => {
+            const { openprice, closeprice } = item
+            const percentage = this.getPercentage(closeprice, openprice)
+            if (closeprice > openprice) return <div>
+              <Tag color="#70b67e">涨</Tag>
+              <Tag color="#70b67e">{percentage}</Tag>
+            </div>
+            return <div>
+              <Tag color="#e6605c">跌</Tag>
+              <Tag color="#e6605c">{percentage}</Tag>
+            </div>
           }
         }
       ]
