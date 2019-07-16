@@ -1,6 +1,7 @@
 
 import React from 'react'
-import { Table, Tag } from 'antd'
+import Table from 'antd/es/table'
+import Tag from 'antd/es/tag'
 
 import './home.scss'
 
